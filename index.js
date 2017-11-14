@@ -31,6 +31,8 @@ function fuzzyMatch(array, criteria ){
   return matches
 }
 
+
+// filter on an object
 function matchName (list, name) {
   return list.filter(function (driver) {
     return driver.name.toLowerCase() === name.toLowerCase();
