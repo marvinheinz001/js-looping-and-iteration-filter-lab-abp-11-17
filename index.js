@@ -9,6 +9,7 @@
 //   return matches
 // }
 
+//using the actual filter function below
 function findMatching(drivers, name){
   let matchingDrivers = drivers.filter(function(driver){
     if(name.toLowerCase() === driver.toLowerCase()){
@@ -20,8 +21,6 @@ function findMatching(drivers, name){
   return matchingDrivers
 }
 
-
-
 function fuzzyMatch(array, criteria ){
   let matches = []
   for(const driver of array){
@@ -30,4 +29,10 @@ function fuzzyMatch(array, criteria ){
     }
   }
   return matches
+}
+
+function matchName (list, name) {
+  return list.filter(function (driver) {
+    return driver.name.toLowerCase() === name.toLowerCase();
+  });
 }
